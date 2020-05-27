@@ -30,6 +30,11 @@ public class App {
             return new ModelAndView(model, "todo.hbs");
         }, new HandlebarsTemplateEngine());
 
-
+        get("/todos", (req, res) ->{
+            Map<String, ArrayList<Object>> model = new HashMap<>();
+            ArrayList<Object> todos = TODO.getAll();
+            model.put("todo", todos);
+            return new ModelAndView(model, "todo.hbs");
+        }, new HandlebarsTemplateEngine());
     }
 }
