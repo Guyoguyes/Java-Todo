@@ -1,0 +1,29 @@
+{{#partial "header"}}
+    {{#partial "title"}}Create todo{{/partial}}
+{{/partial}}
+
+{{#partial "content"}}
+    <div class="form">
+        <form action="/todos" method="POST">
+            <div class="form-group">
+                <label for="task">Task</label>
+                <input type="text" class="form-control" id="task" name="task">
+            </div>
+
+            <div class="form-group">
+                <label for="description">Description of the task</label>
+                <input type="text" class="form-control" id="description" name="description">
+            </div>
+
+            <div class="form-group">
+                <label for="completeDate">Completion Date</label>
+                <input type="date" class="form-control" id="completeDate" name="completeDate">
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Save Task</button>
+            </div>
+        </form>
+    </div>
+{{/partial}}
+{{> layout.hbs}}

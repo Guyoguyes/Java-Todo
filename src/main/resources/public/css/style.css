@@ -1,0 +1,9 @@
+.hero{
+    background-color: black;
+    height: auto;
+}
+.hero h1{
+    font-family: "Bitstream Charter";
+    font-size: 30px;
+    color: aqua;
+}

@@ -9,8 +9,13 @@ public class App {
         staticFileLocation("/public");
 
         get("/", (req, res) ->{
+            Map<String, Object> model = new HashMap<String, Object>();
+            return new ModelAndView(model, "index.hbs");
+        }, new HandlebarsTemplateEngine());
+
+        get("/post-todo", (req, res) ->{
             Map<String, Object> model = new HashMap<>();
-            return new ModelAndView(model, "/index.hbs");
+            return new ModelAndView(model, "post-todo.hbs");
         }, new HandlebarsTemplateEngine());
     }
 }
